@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Stay</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <nav class=" flex pt-5">
+        <div class="pl-12">
+            <p class="text-3xl text-custom-blue" style="font-family: Avant Garde, sans-serif;">First Laurel</p>
+            <p class="text-sm text-red-500">HOTELS & RESORTS</p>
+        </div>
+    
+        <div class=" flex gap-4 pl-13 pt-4 text-custom-blue">
+            <a href="index.html" class="hover:bg-blue-100 p-4  hover:border-b-4 hover:border-custom-blue">Home</a>
+            <a href="" class="hover:bg-blue-100 p-4  hover:border-b-4 hover:border-custom-blue">Rooms</a>
+            <a href="" class="hover:bg-blue-100 p-4  hover:border-b-4 hover:border-custom-blue">Hotel info</a>
+            <a href="" class="hover:bg-blue-100 p-4  hover:border-b-4 hover:border-custom-blue">Offers</a>
+            <a href="" class="hover:bg-blue-100 p-4  hover:border-b-4 hover:border-custom-blue">Gallery</a>
+            <a href="" class="hover:bg-blue-100 p-4  hover:border-b-4 hover:border-custom-blue">Location</a>
+            <a href="" class="hover:bg-blue-100 p-4  hover:border-b-4 hover:border-custom-blue">Dining</a>
+            <a href="" class="hover:bg-blue-100 p-4  hover:border-b-4 hover:border-custom-blue">Events</a>
+        </div>
+    
+        <div class="pl-13 pt-4 text-custom-blue flex gap">
+            <a href="" class="hover:bg-blue-100 p-4  hover:border-b-4 hover:border-custom-blue" >Find Stay</a>
+            <a href="" class="hover:bg-blue-100 p-4  hover:border-b-4 hover:border-custom-blue" >Join</a>
+            <a href="" class="hover:bg-blue-100 p-4  hover:border-b-4 hover:border-custom-blue" >Sign in</a>
+        </div>
+      </nav> 
+
+
+
+ <hr class="bg-grey-300 mt-10">
+
+
+
+<div class="bg-custom-blue w-full md:w-1/2 pl-13 pt-10 pb-10 rounded center ml-20">
+ <form id="reservationForm">
+    <div class="mb-4">
+      <label for="firstName" class="block text-white text-sm font-bold mb-2">First Name</label>
+      <input type="text" id="firstName" name="firstName" class="w-1/2 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+    </div>
+    <div class="mb-4">
+      <label for="lastName" class="block text-white text-sm font-bold mb-2">Last Name</label>
+      <input type="text" id="lastName" name="lastName" class="w-1/2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+    </div>
+    <div class="mb-4">
+      <label for="phoneNumber" class="block text-white text-sm font-bold mb-2">Phone Number</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" class="w-1/2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+    </div>
+    <div class="mb-4">
+      <label for="email" class="block text-white text-sm font-bold mb-2">Email</label>
+      <input type="email" id="email" name="email" class="w-1/2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+    </div>
+    <div class="mb-4">
+      <label for="country" class="block text-white text-sm font-bold mb-2">Country</label>
+      <select id="country" name="country" class="w-1/2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        </select>
+    </div>
+    <div class="mb-4">
+      <label for="occupants" class="block text-white text-sm font-bold mb-2">Number of Occupants</label>
+      <input type="number" id="occupants" name="occupants" min="1" class="w-1/2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+    </div>
+    <div class="mb-4">
+      <label for="gender" class="block text-white text-sm font-bold mb-2">Gender</label>
+      <select id="gender" name="gender" class="w-1/2 shadow appearance-none border rounded w-full py-2 px-3 text-custom-blue leading-tight focus:outline-none focus:shadow-outline bg-white">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+  </form>
+</div> 
+
+
+
+
+
+  <script>
+    const form = document.getElementById('reservationForm');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  // Basic validation (add more as needed)
+  const firstName = document.getElementById('firstName').value;
+  const lastName = document.getElementById('lastName').value;
+  const phoneNumber = document.getElementById('phoneNumber').value;
+  const email = document.getElementById('email').value;
+
+  if (firstName === '' || lastName === '' || phoneNumber === '' || email === '') {
+    alert('Please fill in all required fields');
+    return;
+  }
+
+  // Add more validation logic for phone number, email format, etc.
+
+  // If validation passes, submit the form
+  form.submit();
+});
+
+  </script>
+
+
+
+
+</body>
+</html>

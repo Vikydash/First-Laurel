@@ -2,6 +2,7 @@
 module.exports = {
   content: [
     "./index.html",
+    "./findstay.html",
     "./style.css",
   ],
   theme: {
